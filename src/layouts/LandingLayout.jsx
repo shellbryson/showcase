@@ -1,7 +1,11 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
+// Styles
 import './LandingLayout.scss';
+
+// Assets
+import Logo from '../components/Logo';
 
 export default function LandingLayout() {
 
@@ -14,6 +18,7 @@ export default function LandingLayout() {
         <h1>Shell Bryson</h1>
         <p>Building...</p>
         <Link to="about">About</Link>
+        <Logo />
       </div>
     </div>
   )
