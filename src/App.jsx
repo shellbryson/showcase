@@ -1,16 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.scss';
+import React from 'react';
+import { createRoot } from "react-dom/client";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Link,
+} from "react-router-dom";
+
+// Layouts
+import LandingLayout from './layouts/LandingLayout';
+import PageLayout from './layouts/PageLayout';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <LandingLayout />,
+    },
+    {
+      path: "about",
+      element: <PageLayout />,
+    },
+    {
+      path: "writer",
+      element: <PageLayout />,
+    },
+    {
+      path: "engineer",
+      element: <PageLayout />,
+    },
+  ]);
 
   return (
-    <div className="App">
-      <h1>Shell Bryson</h1>
-      <p>Building...</p>
-    </div>
+    <RouterProvider router={router} />
   )
 }
 
