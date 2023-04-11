@@ -16,7 +16,7 @@ export default function ZoneButton({ settings }) {
   return (
     <div className={`zone-button ${settings.placement} ${settings.color}`}>
       <div className="zone-button__content" onClick={handleOnClick}>
-        <h2><Link to={settings.path} >{settings.title}</Link></h2>
+        <h2><Link to={settings.path}>{settings.title}</Link></h2>
       </div>
     </div>
   )

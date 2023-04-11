@@ -15,38 +15,27 @@
     }
 
     .layout__bg_1_0 {
-      clip-path: polygon(50% 50%, 100% 0%, 0 0, 0% 100%);
-      background-color: var(--color-light-one);
-      z-index: 1;
-      opacity: 1;
+      opacity: 0.2;
     }
 
     .layout__bg_1_1 {
       clip-path: polygon(50% 50%, 100% 0%, 0 0, 0% 100%);
       background-color: var(--color-light-one);
-      z-index: 1;
+
     }
 
     .layout__bg_1_2 {
       clip-path: polygon(45% 45%, 100% 0%, 0 0, 0% 100%);
       background-color: var(--color-light-two);
-      transition-delay: 200ms;
-      z-index: 2;
     }
 
     .layout__bg_1_3 {
       clip-path: polygon(25% 25%, 100% 0%, 0 0, 0% 100%);
       background-color: var(--color-light-three);
-      transition-delay: 300ms;
-      z-index: 3;
     }
 
-    // Set 2
-
     .layout__bg_2_0 {
-      clip-path: polygon(50% 50%, 100% 0%, 100% 100%, 0% 100%);
-      background-color: var(--color-dark-one);
-      opacity: 1;
+      opacity: 0.2;
     }
 
     .layout__bg_2_1 {
@@ -57,13 +46,11 @@
     .layout__bg_2_2 {
       clip-path: polygon(60% 60%, 100% 0%, 100% 100%, 0% 100%);
       background-color: var(--color-dark-two);
-      transition-delay: 200ms;
     }
 
     .layout__bg_2_3 {
       clip-path: polygon(70% 70%, 100% 0%, 100% 100%, 0% 100%);
       background-color: var(--color-dark-three);
-      transition-delay: 300ms;
     }
 
   }
@@ -91,35 +78,50 @@
   // Set 1
 
   .layout__bg_1_0 {
-    opacity: 0.2;
+    clip-path: polygon(50% 50%, 100% 0%, 0 0, 0% 100%);
+    background-color: var(--color-light-one);
+    z-index: 1;
   }
 
   .layout__bg_1_1 {
     clip-path: polygon(0 0, 100% 0%, 0 0, 0% 100%);
+    z-index: 1;
+    transition-delay: 200ms;
   }
 
   .layout__bg_1_2 {
     clip-path: polygon(0 0, 100% 0%, 0 0, 0% 100%);
+    z-index: 2;
+    transition-delay: 300ms;
   }
 
   .layout__bg_1_3 {
     clip-path: polygon(0 0, 100% 0%, 0 0, 0% 100%);
+    z-index: 3;
+    transition-delay: 400ms;
   }
 
   .layout__bg_2_0 {
-    opacity: 0.2;
+    clip-path: polygon(50% 50%, 100% 0%, 100% 100%, 0% 100%);
+    background-color: var(--color-dark-one);
   }
 
   .layout__bg_2_1 {
     clip-path: polygon(100% 100%, 100% 0%, 100% 100%, 0% 100%);
+    z-index: 5;
+    transition-delay: 200ms;
   }
 
   .layout__bg_2_2 {
     clip-path: polygon(100% 100%, 100% 0%, 100% 100%, 0% 100%);
+    z-index: 6;
+    transition-delay: 300ms;
   }
 
   .layout__bg_2_3 {
     clip-path: polygon(100% 100%, 100% 0%, 100% 100%, 0% 100%);
+    z-index: 7;
+    transition-delay: 400ms;
   }
 
   &__portrait {
