@@ -1,25 +1,29 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+
+// Components
+import Logo from '../components/Logo';
 
 // Styles
 import './LandingLayout.scss';
 
 // Assets
-import Logo from '../components/Logo';
+import Portrait from '../components/Portrait';
 
 export default function LandingLayout() {
 
   return (
-    <div className="App">
-      <div className="landing-bg_one"></div>
-      <div className="landing-bg_two"></div>
+    <>
+      <div className="landing__bg_one"></div>
+      <div className="landing__bg_two"></div>
+      <Portrait />
 
-      <div className="landing-content">
+      <div className="landing__content">
         <h1>Shell Bryson</h1>
-        <p>Building...</p>
-        <Link to="about">About</Link>
+      </div>
+
+      <div className="landing__bottom">
         <Logo />
       </div>
-    </div>
+    </>
   )
 }

@@ -5,6 +5,9 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
+// Components
+import Logo from './components/Logo';
+
 // Layouts
 import LandingLayout from './layouts/LandingLayout';
 import PageLayout from './layouts/PageLayout';
@@ -30,7 +33,10 @@ function App() {
   ]);
 
   return (
-    <RouterProvider router={router} />
+    <div className="app">
+      <RouterProvider router={router} />
+    </div>
+
   )
 }
 

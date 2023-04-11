@@ -51,9 +51,20 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  overflow-y: hidden;
 }
 
 h1 {
-  font-size: 3rem;
+  --minFontSize: 2rem;
+  --maxFontSize: 6rem;
+  --scaler: 10vw;
+  font-size: clamp( var(--minFontSize), var(--scaler), var(--maxFontSize) );
+}
+
+p {
+  --minFontSize: 1rem;
+  --maxFontSize: 1.5rem;
+  --scaler: 5vw;
+  font-size: clamp( var(--minFontSize), var(--scaler), var(--maxFontSize) );
   line-height: 1.1;
 }
