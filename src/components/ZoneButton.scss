@@ -1,7 +1,7 @@
 
 .zone-button {
   display: block;
-  position: absolute;
+  position: fixed;
   width: 20%;
   height: 20%;
   z-index: 99;
@@ -39,7 +39,11 @@
 
   &__content {
     position: absolute;
-    padding: 2rem;
+    padding: 1rem;
+
+    @media (min-width: 768px) {
+      padding: 2rem;
+    }
 
     .tl & {
       top: 0;
