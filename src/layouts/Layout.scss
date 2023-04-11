@@ -7,44 +7,65 @@
   height: 100vh;
   background-color: var(--color-dark-three);
 
-  &:hover {
+  &.fade {
+
+    .layout__portrait-image {
+      scale: 0.97;
+      opacity: 0.1;
+    }
 
     .layout__bg_1_0 {
-      opacity: 0.2;
+      clip-path: polygon(50% 50%, 100% 0%, 0 0, 0% 100%);
+      background-color: var(--color-light-one);
+      z-index: 1;
+      opacity: 1;
     }
 
     .layout__bg_1_1 {
-      clip-path: polygon(0 0, 100% 0%, 0 0, 0% 100%);
+      clip-path: polygon(50% 50%, 100% 0%, 0 0, 0% 100%);
+      background-color: var(--color-light-one);
+      z-index: 1;
     }
 
     .layout__bg_1_2 {
-      clip-path: polygon(0 0, 100% 0%, 0 0, 0% 100%);
+      clip-path: polygon(45% 45%, 100% 0%, 0 0, 0% 100%);
+      background-color: var(--color-light-two);
+      transition-delay: 200ms;
+      z-index: 2;
     }
 
     .layout__bg_1_3 {
-      clip-path: polygon(0 0, 100% 0%, 0 0, 0% 100%);
+      clip-path: polygon(25% 25%, 100% 0%, 0 0, 0% 100%);
+      background-color: var(--color-light-three);
+      transition-delay: 300ms;
+      z-index: 3;
     }
 
+    // Set 2
+
     .layout__bg_2_0 {
-      opacity: 0.2;
+      clip-path: polygon(50% 50%, 100% 0%, 100% 100%, 0% 100%);
+      background-color: var(--color-dark-one);
+      opacity: 1;
     }
 
     .layout__bg_2_1 {
-      clip-path: polygon(100% 100%, 100% 0%, 100% 100%, 0% 100%);
+      clip-path: polygon(50% 50%, 100% 0%, 100% 100%, 0% 100%);
+      background-color: var(--color-dark-one);
     }
 
     .layout__bg_2_2 {
-      clip-path: polygon(100% 100%, 100% 0%, 100% 100%, 0% 100%);
+      clip-path: polygon(60% 60%, 100% 0%, 100% 100%, 0% 100%);
+      background-color: var(--color-dark-two);
+      transition-delay: 200ms;
     }
 
     .layout__bg_2_3 {
-      clip-path: polygon(100% 100%, 100% 0%, 100% 100%, 0% 100%);
+      clip-path: polygon(70% 70%, 100% 0%, 100% 100%, 0% 100%);
+      background-color: var(--color-dark-three);
+      transition-delay: 300ms;
     }
 
-    .layout__portrait-image {
-      scale: 0.98;
-      opacity: 0.4;
-    }
   }
 
   &__bg_base {
@@ -69,56 +90,36 @@
 
   // Set 1
 
-  &__bg_1_0 {
-    clip-path: polygon(50% 50%, 100% 0%, 0 0, 0% 100%);
-    background-color: var(--color-light-one);
-    z-index: 1;
-    opacity: 1;
+  .layout__bg_1_0 {
+    opacity: 0.2;
   }
 
-  &__bg_1_1 {
-    clip-path: polygon(50% 50%, 100% 0%, 0 0, 0% 100%);
-    background-color: var(--color-light-one);
-    z-index: 1;
+  .layout__bg_1_1 {
+    clip-path: polygon(0 0, 100% 0%, 0 0, 0% 100%);
   }
 
-  &__bg_1_2 {
-    clip-path: polygon(45% 45%, 100% 0%, 0 0, 0% 100%);
-    background-color: var(--color-light-two);
-    transition-delay: 200ms;
-    z-index: 2;
+  .layout__bg_1_2 {
+    clip-path: polygon(0 0, 100% 0%, 0 0, 0% 100%);
   }
 
-  &__bg_1_3 {
-    clip-path: polygon(25% 25%, 100% 0%, 0 0, 0% 100%);
-    background-color: var(--color-light-three);
-    transition-delay: 300ms;
-    z-index: 3;
+  .layout__bg_1_3 {
+    clip-path: polygon(0 0, 100% 0%, 0 0, 0% 100%);
   }
 
-  // Set 2
-
-  &__bg_2_0 {
-    clip-path: polygon(50% 50%, 100% 0%, 100% 100%, 0% 100%);
-    background-color: var(--color-dark-one);
-    opacity: 1;
+  .layout__bg_2_0 {
+    opacity: 0.2;
   }
 
-  &__bg_2_1 {
-    clip-path: polygon(50% 50%, 100% 0%, 100% 100%, 0% 100%);
-    background-color: var(--color-dark-one);
+  .layout__bg_2_1 {
+    clip-path: polygon(100% 100%, 100% 0%, 100% 100%, 0% 100%);
   }
 
-  &__bg_2_2 {
-    clip-path: polygon(60% 60%, 100% 0%, 100% 100%, 0% 100%);
-    background-color: var(--color-dark-two);
-    transition-delay: 200ms;
+  .layout__bg_2_2 {
+    clip-path: polygon(100% 100%, 100% 0%, 100% 100%, 0% 100%);
   }
 
-  &__bg_2_3 {
-    clip-path: polygon(70% 70%, 100% 0%, 100% 100%, 0% 100%);
-    background-color: var(--color-dark-three);
-    transition-delay: 300ms;
+  .layout__bg_2_3 {
+    clip-path: polygon(100% 100%, 100% 0%, 100% 100%, 0% 100%);
   }
 
   &__portrait {
@@ -141,7 +142,7 @@
   &__portrait-image {
     width: 100%;
     height: auto;
-    opacity: 0.2;
+    opacity: 0.3;
     transition: 3s;
   }
 

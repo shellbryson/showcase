@@ -2,19 +2,30 @@ import React from 'react';
 import { Link } from "react-router-dom";
 
 import './Navigation.scss';
-import LogoImage from '../assets/logo.svg';
+
+import { useSetBackgroundFade } from '../contexts/AppContext';
 
 export default function Navigation() {
 
+  const { setBackgroundFade, isBackgroundFade } = useSetBackgroundFade();
+
+  const handleOnClickHome = () => {
+    setBackgroundFade(false);
+  }
+
+  const handleOnClickLink = () => {
+    setBackgroundFade(true);
+  }
+
   return (
     <div className="navigation">
-      <Link to="engineer">
+      <Link to="engineer" onClick={ handleOnClickLink }>
         Engineer
       </Link>
-      <Link to="writer">
+      <Link to="writer" onClick={ handleOnClickLink }>
         Writer
       </Link>
-      <Link to="/">
+      <Link to="/" onClick={ handleOnClickHome }>
         Home
       </Link>
     </div>

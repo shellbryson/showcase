@@ -12,10 +12,16 @@ import './Layout.scss';
 // Assets
 import PortraitImage from '../assets/Portrait-web.png';
 
+import { useSetBackgroundFade } from '../contexts/AppContext';
+
 export default function Layout() {
 
+  const { setBackgroundFade, isBackgroundFade } = useSetBackgroundFade();
+
+  const fade = isBackgroundFade ? 'fade' : '';
+
   return (
-    <div className="layout">
+    <div className={`layout ${fade}`}>
       <div className="layout__bg_base">
         <div className="layout__bg layout__bg_1_0"></div>
         <div className="layout__bg layout__bg_1_1"></div>
