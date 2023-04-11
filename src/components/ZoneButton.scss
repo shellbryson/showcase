@@ -1,0 +1,45 @@
+
+.zone-button {
+  display: block;
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  z-index: 99;
+  min-width: 300px;
+  max-width: 400px;
+  max-height: 300px;
+  transition: 300ms;
+
+  @media (min-width: 768px) {
+    width: 20%;
+    height: 20%;
+  }
+
+  &.tl {
+    top: 0;
+    left: 0;
+    clip-path: polygon(0 0, 70% 0, 100% 100%, 0 70%);
+  }
+
+  &.br {
+    bottom: 0;
+    right: 0;
+    clip-path: polygon(100% 100%, 100% 30%, 0 0, 30% 100%);
+  }
+
+  &__content {
+    position: absolute;
+    padding: 2rem;
+
+    .tl & {
+      top: 0;
+      left: 0;
+    }
+
+    .br & {
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+}

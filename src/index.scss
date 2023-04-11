@@ -24,6 +24,17 @@
   --color-light-one: #1E1E1E;
   --color-light-two: #212121;
   --color-light-three: #232323;
+
+  --color-engineer: #641212;
+  --color-writer: #1E306B;
+}
+
+.color-bg-engineer {
+  background-color: var(--color-engineer);
+}
+
+.color-bg-writer {
+  background-color: var(--color-writer);
 }
 
 h1,

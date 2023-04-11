@@ -2,6 +2,7 @@ import React from 'react';
 
 // Components
 import Logo from '../components/Logo';
+import ZoneButton from '../components/ZoneButton';
 
 // Styles
 import './LandingLayout.scss';
@@ -31,6 +32,9 @@ export default function LandingLayout() {
       <div className="landing__content">
         <h1>Shell Bryson</h1>
       </div>
+
+      <ZoneButton settings={{ placement: "tl", title: "Engineer", color: 'color-bg-engineer',  }} />
+      <ZoneButton settings={{ placement: "br", title: "Writer", color: 'color-bg-writer' }} />
 
       <div className="landing__bottom">
         <Logo />
