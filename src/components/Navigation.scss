@@ -1,0 +1,33 @@
+
+.navigation {
+  display: flex;
+  position: absolute;
+  gap: 1rem;
+
+  top: 1rem;
+  right: 1rem;
+
+  padding: 2px;
+
+  z-index: 99;
+  transition: 300ms;
+
+  background-color: var(--color-dark-one);
+  border-radius: 3px;
+
+  align-items: center;
+
+  a {
+    padding: 0 0.5rem;
+  }
+
+  @media (min-width: 768px) {
+
+  }
+
+  &__logo {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+}

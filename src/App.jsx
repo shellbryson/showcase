@@ -1,43 +1,31 @@
 import './App.scss';
 import React from 'react';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-
-// Components
-import Logo from './components/Logo';
+import { Routes, Route, } from "react-router-dom";
 
 // Layouts
-import LandingLayout from './layouts/LandingLayout';
-import PageLayout from './layouts/PageLayout';
+import Layout from './layouts/Layout';
+
+// Pages
+import Welcome from './pages/Welcome';
+import About from './pages/About';
+import Engineer from './pages/Engineer';
+import Writer from './pages/Writer';
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <LandingLayout />,
-    },
-    {
-      path: "about",
-      element: <PageLayout />,
-    },
-    {
-      path: "writer",
-      element: <PageLayout />,
-    },
-    {
-      path: "engineer",
-      element: <PageLayout />,
-    },
-  ]);
 
   return (
     <div className="app">
-      <RouterProvider router={router} />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Welcome />} />
+          <Route path="engineer" element={<Engineer />} />
+          <Route path="writer" element={<Writer />} />
+          <Route path="about" element={<About />} />
+          <Route path="*" element={<Welcome />} />
+        </Route>
+      </Routes>
     </div>
-
   )
 }
 
-export default App
+export default App;

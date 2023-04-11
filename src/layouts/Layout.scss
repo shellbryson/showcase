@@ -1,4 +1,4 @@
-.landing {
+.layout {
 
   display: block;
   position: fixed;
@@ -9,39 +9,39 @@
 
   &:hover {
 
-    .landing__bg_1_0 {
+    .layout__bg_1_0 {
       opacity: 0.2;
     }
 
-    .landing__bg_1_1 {
+    .layout__bg_1_1 {
       clip-path: polygon(0 0, 100% 0%, 0 0, 0% 100%);
     }
 
-    .landing__bg_1_2 {
+    .layout__bg_1_2 {
       clip-path: polygon(0 0, 100% 0%, 0 0, 0% 100%);
     }
 
-    .landing__bg_1_3 {
+    .layout__bg_1_3 {
       clip-path: polygon(0 0, 100% 0%, 0 0, 0% 100%);
     }
 
-    .landing__bg_2_0 {
+    .layout__bg_2_0 {
       opacity: 0.2;
     }
 
-    .landing__bg_2_1 {
+    .layout__bg_2_1 {
       clip-path: polygon(100% 100%, 100% 0%, 100% 100%, 0% 100%);
     }
 
-    .landing__bg_2_2 {
+    .layout__bg_2_2 {
       clip-path: polygon(100% 100%, 100% 0%, 100% 100%, 0% 100%);
     }
 
-    .landing__bg_2_3 {
+    .layout__bg_2_3 {
       clip-path: polygon(100% 100%, 100% 0%, 100% 100%, 0% 100%);
     }
 
-    .landing__portrait-image {
+    .layout__portrait-image {
       scale: 0.98;
       opacity: 0.4;
     }
@@ -119,25 +119,6 @@
     clip-path: polygon(70% 70%, 100% 0%, 100% 100%, 0% 100%);
     background-color: var(--color-dark-three);
     transition-delay: 300ms;
-  }
-
-  // Content
-
-  &__content {
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    left: 0;
-    top: 0;
-
-    z-index: 4;
-
-    width: 100%;
-    height: 100%;
-    text-align: center;
   }
 
   &__portrait {

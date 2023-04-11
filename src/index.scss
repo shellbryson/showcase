@@ -74,6 +74,13 @@ h1 {
   --maxFontSize: 6rem;
   --scaler: 10vw;
   font-size: clamp( var(--minFontSize), var(--scaler), var(--maxFontSize) );
+
+  &.small {
+    --minFontSize: 1.5rem;
+    --maxFontSize: 3rem;
+    --scaler: 10vw;
+    font-size: clamp( var(--minFontSize), var(--scaler), var(--maxFontSize) );
+  }
 }
 
 p {
