@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 import './Navigation.scss';
 
-import { useSetBackgroundFade } from '../contexts/AppContext';
+import { useApp } from '../contexts/AppContext';
 
 export default function Navigation() {
 
-  const { setBackgroundFade, isBackgroundFade } = useSetBackgroundFade();
+  const { setBackgroundFade, isBackgroundFade } = useApp();
 
   const handleOnClickHome = () => {
     setBackgroundFade(false);

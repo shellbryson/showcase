@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
+// Contexts
+import { useApp } from '../contexts/AppContext';
 
 // Components
 import Page from '../layouts/Page';
 
-
 export default function Writer() {
+
+  const { setBackgroundFade } = useApp();
+
+  useEffect(() => {
+    setBackgroundFade(true);
+  }, []);
 
   return (
     <Page>

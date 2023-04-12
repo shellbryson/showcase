@@ -1,6 +1,9 @@
 import React from 'react';
 import { Outlet } from "react-router-dom";
 
+// Contexts
+import { useApp } from '../contexts/AppContext';
+
 // Components
 import Navigation from '../components/Navigation';
 import Logo from '../components/Logo';
@@ -12,11 +15,9 @@ import './Layout.scss';
 // Assets
 import PortraitImage from '../assets/Portrait-web.png';
 
-import { useSetBackgroundFade } from '../contexts/AppContext';
-
 export default function Layout() {
 
-  const { setBackgroundFade, isBackgroundFade } = useSetBackgroundFade();
+  const { isBackgroundFade } = useApp();
 
   const fade = isBackgroundFade ? 'fade' : '';
 
