@@ -8,9 +8,10 @@ import Page from '../layouts/Page';
 
 export default function Writer() {
 
-  const { setBackgroundFade } = useApp();
+  const { setBackgroundFade,  setShowingChronology } = useApp();
 
   useEffect(() => {
+    setShowingChronology(false);
     setBackgroundFade(true);
   }, []);
 

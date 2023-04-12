@@ -27,6 +27,11 @@
 
   --color-engineer: #641212;
   --color-writer: #1E306B;
+
+  --color-code: #151515;
+  --color-platform: #6B1E3E;
+  --color-design: #1E3F6B;
+  --color-project: #1E6B4B;
 }
 
 .color-bg-engineer {
@@ -96,4 +101,22 @@ p {
     --scaler: 5vw;
     font-size: clamp( var(--minFontSize), var(--scaler), var(--maxFontSize) );
   }
+}
+
+.btn {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 0.5rem 2rem;
+  font-size: 1.5rem;
+
+  z-index: 99;
+  transition: 300ms;
+
+  background-color: var(--color-dark-one);
+  border-radius: 3px;
+  border: 1px solid var(--color-light-three);
+
+  align-items: center;
+
+  filter: drop-shadow(0 0 0.75rem rgba(255,255,255,0.1));
 }

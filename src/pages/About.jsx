@@ -8,9 +8,10 @@ import Page from '../layouts/Page';
 
 export default function About() {
 
-  const { appVersion, setBackgroundFade } = useApp();
+  const { appVersion, setBackgroundFade, setShowingChronology } = useApp();
 
   useEffect(() => {
+    setShowingChronology(false);
     setBackgroundFade(true);
   }, []);
 

@@ -8,6 +8,7 @@ import { useApp } from '../contexts/AppContext';
 import Navigation from '../components/Navigation';
 import Logo from '../components/Logo';
 import ZoneButton from '../components/ZoneButton';
+import Chronology from '../components/Chronology';
 
 // Styles
 import './Layout.scss';
@@ -47,6 +48,7 @@ export default function Layout() {
         <Logo size="small" path="about" />
       </div>
 
+      <Chronology />
       <Navigation />
     </div>
   )
