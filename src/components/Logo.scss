@@ -2,6 +2,11 @@
   width: 4rem;
   height: 4rem;
 
+  &.small {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
   img {
     height: 100%;
     width: auto;

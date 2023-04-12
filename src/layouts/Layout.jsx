@@ -43,7 +43,7 @@ export default function Layout() {
       <ZoneButton settings={{ placement: "br", title: "Writer", color: 'color-bg-writer', path: "writer" }} />
 
       <div className="layout__bottom">
-        <Logo />
+        <Logo size="small" path="about" />
       </div>
 
       <Navigation />
