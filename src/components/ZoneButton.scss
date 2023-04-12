@@ -9,6 +9,7 @@
   max-width: 400px;
   max-height: 300px;
   transition: 1s;
+  cursor: pointer;
 
   @media (min-width: 768px) {
     width: 20%;
@@ -19,12 +20,16 @@
     top: 0;
     left: 0;
     clip-path: polygon(0 0, 60% 0, 80% 80%, 0 60%);
+    transform: scale(0.6);
+    transform-origin: top left;
   }
 
   &.br {
     bottom: 0;
     right: 0;
     clip-path: polygon(100% 100%, 100% 40%, 20% 20%, 30% 100%);
+    transform: scale(0.6);
+    transform-origin: bottom right;
   }
 
   &:hover {
