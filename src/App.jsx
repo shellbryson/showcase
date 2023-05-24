@@ -1,6 +1,7 @@
 import './App.scss';
 import React from 'react';
 import { Routes, Route, } from "react-router-dom";
+import { Analytics } from '@vercel/analytics/react';
 
 // Layouts
 import Layout from './layouts/Layout';
@@ -24,6 +25,7 @@ function App() {
           <Route path="*" element={<Welcome />} />
         </Route>
       </Routes>
+      <Analytics />
     </div>
   )
 }

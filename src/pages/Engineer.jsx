@@ -217,7 +217,7 @@ export default function Engineer() {
 
   return (
     <Page>
-      <h1 className="small">Front end software engineer</h1>
+      <h1 className="small">Software engineer</h1>
       <p>Click below for work history and technical experience.</p>
       <Link onClick={handleShowTimeline} className="btn">View timeline</Link>
     </Page>
