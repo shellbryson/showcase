@@ -17,7 +17,7 @@ export default function Welcome() {
 
   return (
     <Page>
-      <h1>Shell Bryson</h1>
+      <h1 className='text-5xl	'>Shell Bryson</h1>
     </Page>
   )
 }

@@ -41,9 +41,6 @@ export default function Layout() {
 
       <Outlet />
 
-      <ZoneButton settings={{ placement: "tl", title: "Engineer", color: 'color-bg-engineer', path: "engineer" }} />
-      <ZoneButton settings={{ placement: "br", title: "Writer", color: 'color-bg-writer', path: "writer" }} />
-
       <div className="layout__bottom">
         <Logo size="small" path="about" />
       </div>

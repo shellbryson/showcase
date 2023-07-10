@@ -120,3 +120,7 @@ p {
 
   filter: drop-shadow(0 0 0.75rem rgba(255,255,255,0.1));
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

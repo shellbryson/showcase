@@ -1,5 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
+
+import { getDocs, collection, query } from 'firebase/firestore';
+import { db } from "../firebase";
 
 // Contexts
 import { useApp } from '../contexts/AppContext';
@@ -10,6 +13,7 @@ import Page from '../layouts/Page';
 export default function Engineer() {
 
   const { setBackgroundFade, setChronology, setShowingChronology } = useApp();
+  const [experience, setExperience] = useState([]);
 
   const cards=[
     {
@@ -209,7 +213,23 @@ export default function Engineer() {
     setBackgroundFade(true);
     setShowingChronology(false);
     setChronology(cards);
+    getExperience();
   }, []);
+
+  const getExperience = async () => {
+    const q = query(collection(db, "experience"));
+    const querySnapshot = await getDocs(q);
+    const l = [];
+    querySnapshot.forEach((doc) => {
+      l.push({
+        ...doc.data(),
+        id: doc.id,
+        hidden: false
+      });
+    });
+    setExperience(l);
+    console.log(l);
+  }
 
   const handleShowTimeline = () => {
     setShowingChronology(true)

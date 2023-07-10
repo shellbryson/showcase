@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
-import './Navigation.scss';
-
 import { useApp } from '../contexts/AppContext';
 
 export default function Navigation() {
@@ -18,7 +16,7 @@ export default function Navigation() {
   }
 
   return (
-    <div className="navigation">
+    <div className="flex justify-center z-50 absolute top-2 gap-2 w-screen">
       <Link to="engineer" onClick={ handleOnClickLink }>
         Engineer
       </Link>
